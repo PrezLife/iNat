@@ -209,10 +209,10 @@ function butterflyChart(eleId) {
 	
 	//Define the chart options
 	var chartOptions = {
-		height: 40*numTaxon,
+		height: 40 + 60 + 40*numTaxon,
 		chartArea: {
 			top: 60,
-			height: "80%",
+			height: 40*numTaxon,
 			width: "80%",
 		},
 		title: "Butterfly Observations",
@@ -311,10 +311,10 @@ function ofvsGeneraChart(eleId) {
 	
 	//Define the chart options
 	var chartOptions = {
-		height: 40*numGenera,
+		height: 40 + 60 + 40*numGenera,
 		chartArea: {
 			top: 60,
-			height: "80%",
+			height: 40*numGenera,
 			width: "80%",
 		},
 		title: "Flower Genera Visit Observations - Top " + numGenera,
@@ -417,10 +417,10 @@ function ofvsSpeciesChart(eleId) {
 	
 	//Define the chart options
 	var chartOptions = {
-		height: 40*numSpecies,
+		height: 40 + 60 + 40*numSpecies,
 		chartArea: {
 			top: 60,
-			height: "80%",
+			height: 40*numSpecies,
 			width: "80%",
 		},
 		title: "Flower Species Visit Observations - Top " + numSpecies,
