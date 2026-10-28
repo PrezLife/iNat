@@ -240,6 +240,16 @@ function fetchAPIDataObs(userId,pageNum) {
 				};	
 				//console.log(obsObj.taxonName, obsObj.preferred_common_name)
 				
+				//If the user hasn't provided a taxon name for the observation, then use the community taxon, if it exists
+				if (obsObj.taxonName == null) {
+					if (resultsArr[i].taxon && resultsArr[i].taxon.name) {
+						obsObj.taxonName = resultsArr[i].taxon.name;
+					};
+					if (resultsArr[i].taxon && resultsArr[i].taxon.preferred_common_name) {
+					obsObj.preferred_common_name = resultsArr[i].taxon.preferred_common_name;
+					};
+				};
+
 				obsObj.description = null;
 				if (resultsArr[i].description) {
 					obsObj.description = resultsArr[i].description;
@@ -280,7 +290,7 @@ function buildOFVSObj() {
 		var ofvsGenus = obsObjArr[i].ofvsGenus;
 		if (ofvsGenus != null && !ofvsGeneraObj.hasOwnProperty(ofvsGenus)) {
 			ofvsGeneraObj[ofvsGenus] = {};
-			ofvsGeneraObj[ofvsGenus].commonName = '';
+			ofvsGeneraObj[ofvsGenus].commonName = ofvsGenus;
 			console.log("Genus not in ofvsGeneraObj: ", ofvsGenus)
 		};
 	};
@@ -449,7 +459,7 @@ function buildOFVSObj() {
 	for (var i = 0; i < ofvsSpeciesObjArr.length; i++) {
 		ofvsSpeciesArr.push(ofvsSpeciesObjArr[i].commonName)
 	};
-	//console.log(ofvsSpeciesArr);
+	console.log(ofvsSpeciesArr);
 
 };
 
@@ -467,7 +477,7 @@ function buildButterflyObsObj() {
 		var ofvsGenus = obsObjArr[i].ofvsGenus;
 		
 		//Add the butterfly species name to the butterfly species object if it doesn't already exist.  Otherwise, increment numObs.
-		//console.log(butterflyCommonName, butterflyTaxonName)
+		console.log(butterflyCommonName, butterflyTaxonName, obsObjArr[i].observed_on)
 		var taxonNameArr = butterflyTaxonName.split(" ");
 		if (taxonNameArr.length > 1) { 
 			var taxonName = taxonNameArr[0] + " " + taxonNameArr[1];

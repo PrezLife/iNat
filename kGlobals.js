@@ -60,113 +60,6 @@ var obsObjArr = [
 	},
 ];
 
-//Initialize the OFVS (Observation Field Values) Genera object
-var ofvsGeneraObj = {
-	'Silphium': 	{
-		commonName: 'Rosinweeds',
-		plotColor: 'yellow',
-		species: {
-			'perfoliatum': {
-				taxon: 'Silphium perfoliatum',
-				genus: 'Silphium',
-				commonName: 'Cup Plant',
-		 		butterflySpeciesArr: ['Pearl Crescent', 'Monarch'],
-				numButterflySpecies: 2,
-				numObs: 3,
-				obsTimeVector: [0,364],
-				obsDateArrMMDD: ["0101"],
-				obsSecondDateIndex: 18},
-		},
-		butterflySpeciesArr: ['Pearl Crescent', 'Monarch', 'Harvester'],
-		numOFVSSpecies: 2,
-		numButterflySpecies: 3,
-		numObs: 8,
-		obsTimeVector: [0,364],
-		obsDateArrMMDD: ["0101"],
-		obsSecondDateIndex: 18,
-	},
-	'Achillea':		{commonName: 'Yarrows',		plotColor: 'LightYellow'}, 
-	'Ajuga':		{commonName: 'Bugles',		plotColor: 'BlueViolet'},
-	'Agastache':	{commonName: 'Hyssops',		plotColor: 'blue'},
-	'Ageratina':	{commonName: 'Snakeroots',	plotColor: 'white'},
-	'Anacis':		{commonName: 'Anacis', 		plotColor: 'yellow'},
-	'Andersonglossum': {commonName: 'Andersonglossum', plotColor: 'blue'},
-	'Anethum':		{commonName: 'Anethum',		plotColor:  'yellow'},
-	'Asclepias':	{commonName: 'Milkweeds',	plotColor: 'pink'},
-	'Bidens':		{commonName: 'Beggarticks',	plotColor: 'yellow'},
-	'Blephilia':	{commonName: 'Wood Mints',	plotColor: 'PaleGreen'},
-	'Boltonia':		{commonName: "Doll's Daisies", plotColor: 'white'},
-	'Campanulastrum': {commonName: 'Tall Bellflowers', plotColor: 'blue'},
-	'Cardamine':	{commonName: 'Bittercresses and Toothworts', plotColor: 'pink'},
-	'Cerastium':	{commonName: 'Mouse-ear Chickweeds', plotColor: 'white'},
-	'Cercis':		{commonName: 'Redbuds',		plotColor: 'pink'},
-	'Cirsium':		{commonName: 'Plume Thistles', plotColor:'MediumOrchid'},
-	'Claytonia': 	{commonName: 'Spring Beauties', plotColor: 'pink'},
-	'Conoclinium':	{commonName: 'Mistflowers',	plotColor: 'MediumOrchid'},
-	'Coreopsis':	{commonName: 'Tickseed',		plotColor: 'yellow'},
-	'Cucumis':		{commonName: 'Melons and Cucumbers', plotColor: 'yellow'},
-	'Dalea':		{commonName: 'Prairie Clovers',	plotColor: 'white'},
-	'Delphinium':	{commonName: 'Larkspurs',	plotColor: 'DarkViolet'},
-	'Dicentra':		{commonName: 'Bleedinghearts', plotColor: 'white'},
-	'Desmodium':	{commonName: 'Ticktrefoils',plotColor: 'Violet'},
-	'Dianthus':		{commonName: 'Carnations',	plotColor: 'Fuchsia'},
-	'Echinacea':	{commonName: 'Coneflowers',	plotColor: 'MediumPurple'},
-	'Elaeagnus':	{commonName: 'Oleasters', 	plotColor: 'lightgreen'},
-	'Erigeron':		{commonName: 'Fleabanes and Horseweeds', plotColor: 'lightyellow'},
-	'Eupatorium':	{commonName: 'Bonesets', 	plotColor: 'white'},
-	'Eutrochium':	{commonName: 'Joe-Pye Weeds', plotColor: 'Violet'},
-	'Ficaria':		{commonName: 'Ficaria', 	plotColor: 'yellow'},
-	'Fuchsia':		{commonName: 'Fuchsias', 	plotColor: 'red'},
-	'Geranium':		{commonName: 'Geraniums and Cranesbills', plotColor: 'purple'},
-	'Glechoma':		{commonName: 'Ground-Ivies',plotColor: 'BlueViolet'},
-	'Helenium':		{commonName: 'Sneezeweeds',	plotColor: 'yellow'},
-	'Helianthus':	{commonName: 'Sunflowers',	plotColor: 'yellow'},
-	'Heliopsis':	{commonName: 'Oxeyes',		plotColor: 'yellow'},
-	'Hemerocallis':	{commonName: 'Daylilies',	plotColor: 'orange'},
-	'Iris':			{commonName: 'Irises',		plotColor: 'orange'},
-	'Kummerowia':	{commonName: 'Kummerowia',	plotColor: 'pink'},
-	'Lespedeza':	{commonName: 'Bush Clovers and Lespedeza', plotColor: 'pink'},
-	'Leucanthemum':	{commonName: 'Oxeye Daisies',plotColor: 'lightyellow'},
-	'Liatris': 		{commonName: 'Blazing-Stars',plotColor: 'Violet'},
-	'Lobelia':		{commonName: 'Lobelias',	plotColor: 'blue'},
-	'Lysimachia':	{commonName: 'Loosestrifes',plotColor: 'orange'},
-	'Melilotus':	{commonName: 'Melilots and Sweetclovers', plotColor: 'white'},
-	'Mertensia':	{commonName: 'Bluebells',	plotColor: 'CornflowerBlue'},
-	'Monarda':		{commonName: 'Beebalms and Bergamots', plotColor: 'MediumPurple'},
-	'Obolaria':		{commonName: 'Pennyworts',	plotColor: 'white'},
-	'Ocimum':		{commonName: 'Basils', 		plotColor: 'white'},
-	'Oenothera':	{commonName: 'Evening Primroses, Sundrops, and Beeblossoms',	plotColor: 'yellow'},
-	'Ornithogalum':	{commonName: 'Star-of-Bethlehem', plotColor: 'white'},
-	'Oxalis':		{commonName: 'Woodsorrels',	plotColor: 'yellow'},
-	'Packera':		{commonName: 'American Groundsels and Ragworts',	plotColor: 'yellow'},
-	'Pelargonium':	{commonName: 'Geraniums and Storksbills', plotColor: 'red'},
-	'Penstemon':	{commonName: 'Beardtongues',plotColor: 'white'},
-	'Persicaria':	{commonName: 'Knotweeds, Smartweeds, and Waterpeppers',	plotColor: 'pink'},
-	'Phaseolus':	{commonName: 'Beans',		plotColor: 'Violet'},
-	'Phlox':		{commonName: 'Phlox',		plotColor: 'Violet'},
-	'Prunella':		{commonName: 'Selfheals',	plotColor: 'CornflowerBlue'},
-	'Potentilla':	{commonName: 'Cinquefoils',	plotColor: 'yellow'},
-	'Pycnanthemum':	{commonName: 'Mountain Mints', plotColor: 'Lavender'},
-	'Ranunculus':	{commonName: 'Buttercups',	plotColor: 'yellow'},
-	'Ratibida':		{commonName: 'Coneflowers', plotColor: 'yellow'},
-	'Rudbeckia':	{commonName: 'Black-eyed Susans and Coneflowers',	plotColor: 'yellow'},
-	'Solidago':		{commonName: 'Goldenrods',	plotColor: 'yellow'},
-	'Symphyotrichum':{commonName: 'American Asters', plotColor:'white'},
-	'Tagetes':		{commonName: 'Marigolds',	plotColor: 'yellow'},
-	'Taraxacum':	{commonName: 'Dandelions', 	plotColor: 'yellow',},
-	'Thalictrum':	{commonName: 'Meadow-Rues', plotColor: 'white'},
-	'Trifolium':	{commonName: 'Clovers',		plotColor: 'white'},
-	'Tropaeolum':	{commonName: 'Nasturtiums',	plotColor: 'red'},
-	'Verbena':		{commonName: 'Vervains',	plotColor: 'white'},
-	'Verbesina':	{commonName: 'Crownbeards', plotColor: 'yellow'},
-	'Viola':		{commonName: 'Violets', 	plotColor: 'BlueViolet'},
-	'Zinnia':		{commonName: 'Zinnias', 	plotColor: 'red'},
-	'Wisteria':		{commonName: 'Wisterias', 	plotColor: 'purple'},
-};
-
-//Array of ofvs genera and species objects
-var ofvsGeneraObjArr = [];
-var ofvsSpeciesObjArr = [];
 
 //Butterfly Observation object.  Built in buildButterflyObsObj
 var butterflyObsObj = {
@@ -271,6 +164,7 @@ var butterflyColorObj = {
 	'Phyciodes tharos':		{plotColor: 'DarkOrange'}, //Pearl Crescent
 	'Pieris rapae':			{plotColor: 'white'}, //Small White
 	'Pieris virginiensis':	{plotColor: 'white'}, //West Virginia White
+	'Poanes viator':		{plotColor: 'SaddleBrown'}, //Broad-winged Skipper
 	'Polites egeremet':		{plotColor: 'SaddleBrown'}, //Northern Broken-Dash
 	'Polites peckius':		{plotColor: 'DarkOrange'}, //Peck's Skipper
 	'Polites themistocles':	{plotColor: 'DarkOrange'}, //Tawny-edged Skipper
@@ -295,12 +189,122 @@ var butterflyColorObj = {
 	
 };
 
+//Initialize the OFVS (Observation Field Values) Genera object
+var ofvsGeneraObj = {
+	'Silphium': 	{
+		commonName: 'Rosinweeds',
+		plotColor: 'yellow',
+		species: {
+			'perfoliatum': {
+				taxon: 'Silphium perfoliatum',
+				genus: 'Silphium',
+				commonName: 'Cup Plant',
+		 		butterflySpeciesArr: ['Pearl Crescent', 'Monarch'],
+				numButterflySpecies: 2,
+				numObs: 3,
+				obsTimeVector: [0,364],
+				obsDateArrMMDD: ["0101"],
+				obsSecondDateIndex: 18},
+		},
+		butterflySpeciesArr: ['Pearl Crescent', 'Monarch', 'Harvester'],
+		numOFVSSpecies: 2,
+		numButterflySpecies: 3,
+		numObs: 8,
+		obsTimeVector: [0,364],
+		obsDateArrMMDD: ["0101"],
+		obsSecondDateIndex: 18,
+	},
+	'Achillea':		{commonName: 'Yarrows',		plotColor: 'LightYellow'}, 
+	'Ajuga':		{commonName: 'Bugles',		plotColor: 'BlueViolet'},
+	'Agastache':	{commonName: 'Hyssops',		plotColor: 'blue'},
+	'Ageratina':	{commonName: 'Snakeroots',	plotColor: 'white'},
+	'Anacis':		{commonName: 'Anacis', 		plotColor: 'yellow'},
+	'Andersonglossum': {commonName: 'Andersonglossum', plotColor: 'blue'},
+	'Anethum':		{commonName: 'Anethum',		plotColor:  'yellow'},
+	'Asclepias':	{commonName: 'Milkweeds',	plotColor: 'pink'},
+	'Bidens':		{commonName: 'Beggarticks',	plotColor: 'yellow'},
+	'Blephilia':	{commonName: 'Wood Mints',	plotColor: 'PaleGreen'},
+	'Boltonia':		{commonName: "Doll's Daisies", plotColor: 'white'},
+	'Campanulastrum': {commonName: 'Tall Bellflowers', plotColor: 'blue'},
+	'Cardamine':	{commonName: 'Bittercresses and Toothworts', plotColor: 'pink'},
+	'Cerastium':	{commonName: 'Mouse-ear Chickweeds', plotColor: 'white'},
+	'Cercis':		{commonName: 'Redbuds',		plotColor: 'pink'},
+	'Cirsium':		{commonName: 'Plume Thistles', plotColor:'MediumOrchid'},
+	'Claytonia': 	{commonName: 'Spring Beauties', plotColor: 'pink'},
+	'Conoclinium':	{commonName: 'Mistflowers',	plotColor: 'MediumOrchid'},
+	'Coreopsis':	{commonName: 'Tickseed',		plotColor: 'yellow'},
+	'Cucumis':		{commonName: 'Melons and Cucumbers', plotColor: 'yellow'},
+	'Dalea':		{commonName: 'Prairie Clovers',	plotColor: 'white'},
+	'Delphinium':	{commonName: 'Larkspurs',	plotColor: 'DarkViolet'},
+	'Dicentra':		{commonName: 'Bleedinghearts', plotColor: 'white'},
+	'Desmodium':	{commonName: 'Ticktrefoils',plotColor: 'Violet'},
+	'Dianthus':		{commonName: 'Carnations',	plotColor: 'Fuchsia'},
+	'Echinacea':	{commonName: 'Coneflowers',	plotColor: 'MediumPurple'},
+	'Elaeagnus':	{commonName: 'Oleasters', 	plotColor: 'lightgreen'},
+	'Erigeron':		{commonName: 'Fleabanes and Horseweeds', plotColor: 'lightyellow'},
+	'Eupatorium':	{commonName: 'Bonesets', 	plotColor: 'white'},
+	'Eutrochium':	{commonName: 'Joe-Pye Weeds', plotColor: 'Violet'},
+	'Ficaria':		{commonName: 'Ficaria', 	plotColor: 'yellow'},
+	'Fuchsia':		{commonName: 'Fuchsias', 	plotColor: 'red'},
+	'Geranium':		{commonName: 'Geraniums and Cranesbills', plotColor: 'purple'},
+	'Glechoma':		{commonName: 'Ground-Ivies',plotColor: 'BlueViolet'},
+	'Helenium':		{commonName: 'Sneezeweeds',	plotColor: 'yellow'},
+	'Helianthus':	{commonName: 'Sunflowers',	plotColor: 'yellow'},
+	'Heliopsis':	{commonName: 'Oxeyes',		plotColor: 'yellow'},
+	'Hemerocallis':	{commonName: 'Daylilies',	plotColor: 'orange'},
+	'Iris':			{commonName: 'Irises',		plotColor: 'orange'},
+	'Kummerowia':	{commonName: 'Kummerowia',	plotColor: 'pink'},
+	'Lamium':		{commonName: 'Deadnettles and Archangels', plotColor:'pink'},
+	'Lespedeza':	{commonName: 'Bush Clovers and Lespedeza', plotColor: 'pink'},
+	'Leucanthemum':	{commonName: 'Oxeye Daisies',plotColor: 'lightyellow'},
+	'Liatris': 		{commonName: 'Blazing-Stars',plotColor: 'Violet'},
+	'Lobelia':		{commonName: 'Lobelias',	plotColor: 'blue'},
+	'Lysimachia':	{commonName: 'Loosestrifes',plotColor: 'orange'},
+	'Melilotus':	{commonName: 'Melilots and Sweetclovers', plotColor: 'white'},
+	'Mertensia':	{commonName: 'Bluebells',	plotColor: 'CornflowerBlue'},
+	'Monarda':		{commonName: 'Beebalms and Bergamots', plotColor: 'MediumPurple'},
+	'Obolaria':		{commonName: 'Pennyworts',	plotColor: 'white'},
+	'Ocimum':		{commonName: 'Basils', 		plotColor: 'white'},
+	'Oenothera':	{commonName: 'Evening Primroses, Sundrops, and Beeblossoms',	plotColor: 'yellow'},
+	'Ornithogalum':	{commonName: 'Star-of-Bethlehem', plotColor: 'white'},
+	'Oxalis':		{commonName: 'Woodsorrels',	plotColor: 'yellow'},
+	'Packera':		{commonName: 'American Groundsels and Ragworts',	plotColor: 'yellow'},
+	'Pelargonium':	{commonName: 'Geraniums and Storksbills', plotColor: 'red'},
+	'Penstemon':	{commonName: 'Beardtongues',plotColor: 'white'},
+	'Persicaria':	{commonName: 'Knotweeds, Smartweeds, and Waterpeppers',	plotColor: 'pink'},
+	'Phaseolus':	{commonName: 'Beans',		plotColor: 'Violet'},
+	'Phlox':		{commonName: 'Phlox',		plotColor: 'Violet'},
+	'Prunella':		{commonName: 'Selfheals',	plotColor: 'CornflowerBlue'},
+	'Potentilla':	{commonName: 'Cinquefoils',	plotColor: 'yellow'},
+	'Pycnanthemum':	{commonName: 'Mountain Mints', plotColor: 'Lavender'},
+	'Ranunculus':	{commonName: 'Buttercups',	plotColor: 'yellow'},
+	'Ratibida':		{commonName: 'Coneflowers', plotColor: 'yellow'},
+	'Rudbeckia':	{commonName: 'Black-eyed Susans and Coneflowers',	plotColor: 'yellow'},
+	'Solidago':		{commonName: 'Goldenrods',	plotColor: 'yellow'},
+	'Symphyotrichum':{commonName: 'American Asters', plotColor:'white'},
+	'Tagetes':		{commonName: 'Marigolds',	plotColor: 'yellow'},
+	'Taraxacum':	{commonName: 'Dandelions', 	plotColor: 'yellow',},
+	'Thalictrum':	{commonName: 'Meadow-Rues', plotColor: 'white'},
+	'Trifolium':	{commonName: 'Clovers',		plotColor: 'white'},
+	'Tropaeolum':	{commonName: 'Nasturtiums',	plotColor: 'red'},
+	'Verbena':		{commonName: 'Vervains',	plotColor: 'white'},
+	'Verbesina':	{commonName: 'Crownbeards', plotColor: 'yellow'},
+	'Viola':		{commonName: 'Violets', 	plotColor: 'BlueViolet'},
+	'Zinnia':		{commonName: 'Zinnias', 	plotColor: 'red'},
+	'Wisteria':		{commonName: 'Wisterias', 	plotColor: 'purple'},
+};
+
+//Array of ofvs genera and species objects
+var ofvsGeneraObjArr = [];
+var ofvsSpeciesObjArr = [];
+
 
 //Build an object with the plotting attributes for each OFVS Species whose color differs from the color specified for its genus in OVFS_Genera_Obj
 var ofvsSpeciesAlternateColorObj = {
 	'Symphyotrichum cordifolium':	{plotColor: 'CornflowerBlue'},//Common Blue Wood Aster
 	'Symphyotrichum novae-angliae':	{plotColor: 'MediumOrchid'},	//New England aster
 	'Symphyotrichum shortii':		{plotColor: 'CornflowerBlue'},//Short's aster
+	'Symphyotrichum laeve':			{plotColor: 'CornflowerBlue'}, //Smooth Blue Aster
 	'Trifolium pratense':			{plotColor: 'pink'},	//Red Clover
 };
 
