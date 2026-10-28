@@ -408,8 +408,8 @@ function buildOFVSObj() {
 			ofvsGeneraObjArr.push(genusObj);
 		};
 	};
-	//Sort the OFVS genera object array by number of butterfly species, most to least
-	ofvsGeneraObjArr.sort((a,b) => (a.numButterflySpecies < b.numButterflySpecies) ? 1 : -1);
+	//Sort the OFVS genera object array first by number of butterfly species and then by number of observations, most to least.
+	ofvsGeneraObjArr.sort((a, b) => (b.numButterflySpecies - a.numButterflySpecies) || (b.numObs - a.numObs));
 	//console.log(ofvsGeneraObjArr[0])
 	
 	//Convert ofvsGeneraObj to an array of species so it can be sorted by attribute values
@@ -440,8 +440,8 @@ function buildOFVSObj() {
 			};
 		};
 	};
-	//Sort the OFVS species object array by number of species, most to least
-	ofvsSpeciesObjArr.sort((a,b) => (a.numButterflySpecies < b.numButterflySpecies) ? 1 : -1);
+	//Sort the OFVS species object array first by number of butterfly species and then by number of observations	
+	ofvsSpeciesObjArr.sort((a, b) => (b.numButterflySpecies - a.numButterflySpecies) || (b.numObs - a.numObs));
 	//console.log(ofvsSpeciesObjArr.slice(0, 5))
 	
 	//Build an array of OFVS species names and output it to the console so it can be copied and pasted
@@ -519,7 +519,7 @@ function buildButterflyObsObj() {
 	};
 	//console.log(butterflyObsObj)
 
-	//Convert the OFVS Butterfly object to an array so it can be sorted by attribute values
+	//Convert the butterfly object to an array so it can be sorted by attribute values
 	butterflyObsObjArr = [];
 	for (key in butterflyObsObj) {
 		var taxonObj = butterflyObsObj[key];
@@ -527,10 +527,9 @@ function buildButterflyObsObj() {
 		butterflyObsObjArr.push(taxonObj)
 	};
 	
-	//Sort the OFVS object array by number of observations, least to most
-	butterflyObsObjArr.sort((a,b) => (a.numObs > b.numObs) ? 1 : -1);
-	//Sort the OFVS object array by number of ofvs genera, most to least
-	butterflyObsObjArr.sort((a,b) => (a.numOFVSGenera < b.numOFVSGenera) ? 1 : -1);	
+	//Sort the Butterfly object array by number of ofvs genera and then number of observations, most to least
+	butterflyObsObjArr.sort((a, b) => (b.numOFVSGenera - a.numOFVSGenera) || (b.numObs - a.numObs));
+	
 };
 
 function buildButterflyCountObj() {

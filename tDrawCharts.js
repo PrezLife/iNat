@@ -40,6 +40,7 @@ function butterflyObsCountChart(eleId) {
 	//Define the chart options
 	var chartOptions = {
 		height: 500,
+		width:  1100,
 		chartArea: {
 			top: 60,
 			height: "80%",
@@ -118,6 +119,7 @@ function butterflySpeciesCountChart(eleId) {
 	//Define the chart options
 	var chartOptions = {
 		height: 500,
+		width: 1100,
 		chartArea: {
 			top: 60,
 			height: "80%",
@@ -210,10 +212,11 @@ function butterflyChart(eleId) {
 	//Define the chart options
 	var chartOptions = {
 		height: 40 + 60 + 40*numTaxon,
+		width: 1100,
 		chartArea: {
 			top: 60,
 			height: 40*numTaxon,
-			width: "80%",
+			width: "90%",
 		},
 		title: "Butterfly Observations",
 		legend: {
@@ -312,10 +315,11 @@ function ofvsGeneraChart(eleId) {
 	//Define the chart options
 	var chartOptions = {
 		height: 40 + 60 + 40*numGenera,
+		width:  1100,
 		chartArea: {
 			top: 60,
 			height: 40*numGenera,
-			width: "80%",
+			width: "90%",
 		},
 		title: "Flower Genera Visit Observations - Top " + numGenera,
 		legend: {
@@ -418,10 +422,11 @@ function ofvsSpeciesChart(eleId) {
 	//Define the chart options
 	var chartOptions = {
 		height: 40 + 60 + 40*numSpecies,
+		width: 1100,
 		chartArea: {
 			top: 60,
 			height: 40*numSpecies,
-			width: "80%",
+			width: "90%",
 		},
 		title: "Flower Species Visit Observations - Top " + numSpecies,
 		legend: {
